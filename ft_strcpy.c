@@ -10,16 +10,28 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, const char *src)
+/*
+**	copy strings
+**
+**	DESCRIPTION
+**     The strcpy() function copies the string src to dst (including
+**     the terminating `\0' character.)
+**
+**
+**	RETURN VALUES
+**     The strcpy() function return dst.
+*/
+
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int	i;
 
 	i = 0;
 	while (src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	dst[i] = '\0';
+	return (dst);
 }
