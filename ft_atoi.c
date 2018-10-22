@@ -12,6 +12,10 @@
 
 #include "libft.h"
 
+/*
+**	convert ASCII string to integer
+*/
+
 static int		ft_check_intmax(const char *nptr)
 {
 	int		len;
@@ -21,8 +25,7 @@ static int		ft_check_intmax(const char *nptr)
 		len++;
 	if (len > 19)
 		return (0);
-	else
-		return (1);
+	return (1);
 }
 
 intmax_t		ft_atoi_intmax(const char *nptr)
@@ -45,8 +48,7 @@ intmax_t		ft_atoi_intmax(const char *nptr)
 	{
 		if (*nptr == '-')
 			return (0);
-		else
-			return (-1);
+		return (-1);
 	}
 	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
 		res = res * 10 + nptr[i++] - '0';
@@ -62,8 +64,7 @@ static int		ft_check(const char *nptr)
 		len++;
 	if (len > 10)
 		return (0);
-	else
-		return (1);
+	return (1);
 }
 
 int				ft_atoi(const char *nptr)
@@ -82,12 +83,11 @@ int				ft_atoi(const char *nptr)
 		sign = -1;
 	if (nptr[i] == '+' || nptr[i] == '-')
 		i++;
-	if (ft_check(nptr + i) == 0)
+	if (!ft_check(nptr + i))
 	{
 		if (*nptr == '-')
 			return (0);
-		else
-			return (-1);
+		return (-1);
 	}
 	while (nptr[i] && nptr[i] >= '0' && nptr[i] <= '9')
 		res = res * 10 + nptr[i++] - '0';
