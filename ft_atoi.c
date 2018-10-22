@@ -67,6 +67,10 @@ static int		ft_check(const char *nptr)
 	return (1);
 }
 
+/*
+**	OR		while (' ' || (>= '\t' && <= '\r'))
+*/
+
 int				ft_atoi(const char *nptr)
 {
 	int	res;
