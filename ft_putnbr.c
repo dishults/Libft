@@ -31,7 +31,7 @@ void	ft_putnbr(int n)
 	tmp = n;
 	while (length)
 	{
-		ft_putchar((char)((tmp / length)) + 48);
+		ft_putchar((char)((tmp / length)) + '0');
 		tmp %= length;
 		length /= 10;
 	}
