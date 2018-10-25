@@ -6,7 +6,7 @@
 /*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:33:09 by dshults           #+#    #+#             */
-/*   Updated: 2018/10/25 15:35:14 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/25 15:56:47 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ char		**ft_strsplit(char const *s, char c)
         return (0);
     skip(s, &i, c);
     w = count_words(s, i, c);
-    words = (char **)malloc(sizeof(char *) * (w + 1));
+    if (!(words = (char **)malloc(sizeof(char *) * (w + 1))))
+		return (0);
     words[w] = NULL;
     w = 0;
     while (s[i])
