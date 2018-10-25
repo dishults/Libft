@@ -6,7 +6,7 @@
 /*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:33:09 by dshults           #+#    #+#             */
-/*   Updated: 2018/10/25 15:25:08 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/25 15:35:14 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,24 +40,24 @@ static int    count_words(char const *s, int i, char c)
 
 static int    count_chars(char const *s, int i, char c)
 {
-    int    l;
+    int    chr;
 
-    l = 0;
+    chr = 0;
     while (s[i])
     {
-        l++;
+        chr++;
         i++;
         if (s[i] == c)
             break;
     }
-    return (l);
+    return (chr);
 }
 
 char		**ft_strsplit(char const *s, char c)
 {
     int    i;
     int    w;
-    int    l;
+    int    chr;
     char    **words;
 
     i = 0;
@@ -70,12 +70,11 @@ char		**ft_strsplit(char const *s, char c)
     w = 0;
     while (s[i])
     {
-        l = count_chars(s, i, c);
-        words[w] = (char *)malloc(sizeof(char) * (l + 1));
-        words[w][l] = '\0';
-        l = 0;
+        chr = count_chars(s, i, c);
+        words[w] = ft_strndup(s, chr);
+        chr = 0;
         while (s[i] && s[i] != c)
-            words[w][l++] = s[i++];
+            words[w][chr++] = s[i++];
         skip(s, &i, c);
         w++;
     }
