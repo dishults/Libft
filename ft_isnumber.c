@@ -1,16 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/14 18:19:06 by dshults           #+#    #+#             */
-/*   Updated: 2018/10/25 16:00:23 by dshults          ###   ########.fr       */
+/*   Created: 2018/10/25 15:55:30 by dshults           #+#    #+#             */
+/*   Updated: 2018/10/25 15:56:19 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isnumber(char *num)
 {
-	return (c >= '0' && c <= '9');
+	int	i;
+
+	i = 0;
+	if (!num || !num[i])
+		return (0);
+	while (num[i])
+	{
+		if (!ft_isdigit(num[i]))
+			return (0);
+		i++;
+	}
+	return (1);
 }

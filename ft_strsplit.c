@@ -3,87 +3,81 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:33:09 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:33:10 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/25 15:56:47 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_words_count(char *s, char c)
+static void    skip(char const *s, int *i, char c)
 {
-	int		char_to_check;
-	int		letter;
-	int		words_count;
-
-	char_to_check = 0;
-	letter = 0;
-	words_count = 0;
-	while (s[char_to_check])
-	{
-		if (s[char_to_check] != c)
-		{
-			letter++;
-			if (letter == 1)
-				words_count++;
-		}
-		else
-			letter = 0;
-		char_to_check++;
-	}
-	return (words_count);
+    while (s[*i] == c)
+        (*i)++;
 }
 
-static int	ft_char_count(char *s, char c, int word_to_check, int *word_start)
+static int    count_words(char const *s, int i, char c)
 {
-	int		char_to_check;
-	int		letter;
-	int		found;
-	int		length;
+    int    words;
 
-	char_to_check = 0;
-	letter = 0;
-	found = -1;
-	length = 0;
-	while (s[char_to_check])
-	{
-		if (s[char_to_check] != c)
-		{
-			letter++;
-			if (letter == 1)
-				if (++found == word_to_check)
-					*word_start = char_to_check;
-			if (found == word_to_check)
-				length++;
-		}
-		else
-			letter = 0;
-		char_to_check++;
-	}
-	return (length);
+    words = 1;
+    while (s[i])
+    {
+        if (s[i] == c)
+        {
+            words++;
+            skip(s, &i, c);
+            if (!s[i])
+                words--;
+        }
+        else
+            i++;
+    }
+    return (words);
+}
+
+static int    count_chars(char const *s, int i, char c)
+{
+    int    chr;
+
+    chr = 0;
+    while (s[i])
+    {
+        chr++;
+        i++;
+        if (s[i] == c)
+            break;
+    }
+    return (chr);
 }
 
 char		**ft_strsplit(char const *s, char c)
 {
-	int		word_start;
-	int		word_to_check;
-	int		words_count;
-	char	**copy;
-	int		char_count;
+    int    i;
+    int    w;
+    int    chr;
+    char    **words;
 
-	word_start = 0;
-	word_to_check = 0;
-	words_count = ft_words_count((char *)s, c);
-	if (!(copy = malloc(sizeof(char *) * words_count + 1)))
+    i = 0;
+    if (!s || !s[0])
+        return (0);
+    skip(s, &i, c);
+    w = count_words(s, i, c);
+    if (!(words = (char **)malloc(sizeof(char *) * (w + 1))))
 		return (0);
-	while (word_to_check < words_count)
-	{
-		char_count = ft_char_count((char *)s, c, word_to_check, &word_start);
-		copy[word_to_check] = ft_strndup((char *)&s[word_start], char_count);
-		word_to_check++;
-	}
-	copy[word_to_check] = NULL;
-	return (copy);
+    words[w] = NULL;
+    w = 0;
+    while (s[i])
+    {
+        chr = count_chars(s, i, c);
+        words[w] = ft_strndup(s, chr);
+        chr = 0;
+        while (s[i] && s[i] != c)
+            words[w][chr++] = s[i++];
+        skip(s, &i, c);
+        w++;
+    }
+    return (words);
 }

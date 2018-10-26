@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dshults <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: dshults <dshults@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 18:34:55 by dshults           #+#    #+#              #
-#    Updated: 2017/11/14 18:34:57 by dshults          ###   ########.fr        #
+#    Updated: 2018/10/25 15:57:40 by dshults          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRCS = ft_atoi.c \
 	ft_isalpha.c \
 	ft_isascii.c \
 	ft_isdigit.c \
+	ft_isnumber.c \
 	ft_isprint.c \
 	ft_itoa.c \
 	ft_malloc_xy.c \
