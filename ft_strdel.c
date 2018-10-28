@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:29:10 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:29:12 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:06:32 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Takes as a parameter the address of a string that needs to be
+**	freed with free(3), then sets its pointer to NULL.
+*/
 
 #include "libft.h"
 

@@ -3,12 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:32:59 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:33:00 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 16:36:40 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	locate character in string
+**
+**	The strrchr() function is identical to strchr(), except it locates the
+**	last occurrence of c.
+**
+**	The functions strchr() and strrchr() return a pointer to the located
+**	character, or NULL if the character does not appear in the string.
+*/
 
 #include "libft.h"
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:34:42 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:34:44 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 16:49:54 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ int					ft_isalnum(int c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
+int					ft_islower(int c);
 int					ft_isnumber(char *num);
 int					ft_isprint(int c);
+int					ft_isupper(int c);
 char				*ft_itoa(int n);
 char				**ft_malloc_xy(size_t x, size_t y);
 void				*ft_memalloc(size_t size);

@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:19:32 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:19:34 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:42:57 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Converts integer to string
+*/
 
 #include "libft.h"
 

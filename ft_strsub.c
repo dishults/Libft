@@ -3,12 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:33:40 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:33:41 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 17:58:25 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Allocates (with malloc(3)) and returns a “fresh” substring
+**	from the string given as argument. The substring begins at
+**	indexstart and is of size len. If start and len aren’t refering
+**	to a valid substring, the behavior is undefined. If the
+**	allocation fails, the function returns NULL.
+*/
 
 #include "libft.h"
 

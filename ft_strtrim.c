@@ -3,12 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:34:04 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:34:06 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:37:47 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Allocates (with malloc(3)) and returns a copy of the string
+**	given as argument without whitespaces at the beginning or at
+**	the end of the string. Will be considered as whitespaces the
+**	following characters ’ ’, ’\n’ and ’\t’. If s has no whitespaces
+**	at the beginning or at the end, the function returns a
+**	copy of s. If the allocation fails the function returns NULL.
+*/
 
 #include "libft.h"
 

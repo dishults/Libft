@@ -3,29 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:31:56 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:31:57 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 16:23:34 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+**	copy strings
+**
+**	The strncpy() function copies at most len characters from src into dst.
+**	If src is less than len characters long, the remainder of dst
+**	is filled with `\0' characters.  Otherwise, dst is not terminated.
+**
+**	The source and destination strings should not overlap, as the behavior is
+**	undefined.
+*/
+
 #include "libft.h"
 
-char		*ft_strncpy(char *dest, const char *src, size_t n)
+char		*ft_strncpy(char *dst, const char *src, size_t len)
 {
 	size_t	i;
 
 	i = 0;
-	while (i < n && src[i])
+	while (i < len && src[i])
 	{
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	while (i < n)
+	while (i < len)
 	{
-		dest[i] = '\0';
+		dst[i] = '\0';
 		i++;
 	}
-	return (dest);
+	return (dst);
 }

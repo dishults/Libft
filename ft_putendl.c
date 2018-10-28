@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:23:24 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:23:26 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:48:33 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Outputs the string s to the standard output followed by a ’\n’.
+*/
 
 #include "libft.h"
 

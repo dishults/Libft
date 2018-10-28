@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:26:47 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:26:48 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:55:38 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Outputs the integer n to the file descriptor fd.
+*/
 
 #include "libft.h"
 
@@ -31,7 +35,7 @@ void	ft_putnbr_fd(int n, int fd)
 	tmp = n;
 	while (length)
 	{
-		ft_putchar_fd((char)((tmp / length)) + 48, fd);
+		ft_putchar_fd((char)((tmp / length)) + '0', fd);
 		tmp %= length;
 		length /= 10;
 	}

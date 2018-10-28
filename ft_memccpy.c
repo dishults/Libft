@@ -3,12 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:19:59 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:20:01 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 16:01:40 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	copy string until character found
+**
+**	The memccpy() function copies bytes from string src to string dst.  If
+**	the character c (as converted to an unsigned char) occurs in the string
+**	src, the copy stops and a pointer to the byte after the copy of c in the
+**	string dst is returned.  Otherwise, n bytes are copied, and a NULL
+**	pointer is returned.
+**
+**	The source and destination strings should not overlap, as the behavior is
+**	undefined.
+*/
 
 #include "libft.h"
 

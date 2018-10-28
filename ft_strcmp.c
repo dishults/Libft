@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:28:22 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:28:24 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 16:41:23 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	compare strings
+*/
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

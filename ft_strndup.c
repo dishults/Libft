@@ -3,12 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:29:23 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:29:24 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 17:57:37 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	save a copy of a string
+**
+**	The strndup() function copies at most n characters from the string s1
+**	always NULL terminating the copied string.
+*/
 
 #include "libft.h"
 

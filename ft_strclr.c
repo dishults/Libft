@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:28:13 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:28:14 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:08:32 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Sets every character of the string to the value ’\0’.
+*/
 
 void	ft_strclr(char *s)
 {

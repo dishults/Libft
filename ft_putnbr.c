@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:47:01 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:47:03 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:52:30 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Outputs the integer n to the standard output.
+*/
 
 #include "libft.h"
 

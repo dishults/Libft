@@ -3,14 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:19:47 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:19:49 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:01:14 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+**	Allocates (with malloc(3)) and returns a “fresh” memory area.
+**	The memory allocated is initialized to 0. If the allocation
+**	fails, the function returns NULL.
+*/
 
 void	*ft_memalloc(size_t size)
 {

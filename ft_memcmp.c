@@ -3,12 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:20:50 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:20:51 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 16:09:26 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	compare byte string
+**
+**	The memcmp() function compares byte string s1 against byte string s2.
+**	Both strings are assumed to be n bytes long.
+*/
 
 #include "libft.h"
 

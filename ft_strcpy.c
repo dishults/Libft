@@ -3,23 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:28:40 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:28:41 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 16:18:59 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 **	copy strings
 **
-**	DESCRIPTION
-**     The strcpy() function copies the string src to dst (including
-**     the terminating `\0' character.)
-**
-**
-**	RETURN VALUES
-**     The strcpy() function return dst.
+** 	The strcpy() function copies the string src to dst (including
+**	the terminating `\0' character.)
 */
 
 char	*ft_strcpy(char *dst, const char *src)

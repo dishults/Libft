@@ -3,12 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:22:22 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:22:23 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:43:20 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Outputs the character c to the standard output.
+*/
 
 #include "libft.h"
 

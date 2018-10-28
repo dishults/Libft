@@ -3,12 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:31:02 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:31:04 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 15:11:43 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	Applies the function f to each character of the string given
+**	as argument to create a “fresh” new string (with malloc(3))
+**	resulting from the successive applications of f.
+*/
 
 #include "libft.h"
 

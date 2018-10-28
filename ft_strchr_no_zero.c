@@ -3,12 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr_no_zero.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/04 14:59:00 by dshults           #+#    #+#             */
-/*   Updated: 2018/04/04 14:59:02 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 18:00:24 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	locate character in string
+**
+**	locates the first occurrence of c (converted to a char)
+**	in the string pointed to by s without '\0'.
+*/
 
 char	*ft_strchr_no_zero(const char *s, int c)
 {

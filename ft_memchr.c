@@ -3,12 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:20:31 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:20:33 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/28 16:07:48 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+**	locate byte in byte string
+**
+**	The memchr() function locates the first occurrence of c
+**	(converted to an unsigned char) in string s and
+**
+**	returns a pointer to the byte located, or NULL if
+**	no such byte exists within n bytes.
+*/
 
 #include "libft.h"
 
