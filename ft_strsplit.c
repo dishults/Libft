@@ -6,7 +6,7 @@
 /*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:33:09 by dshults           #+#    #+#             */
-/*   Updated: 2018/10/28 15:40:41 by dshults          ###   ########.fr       */
+/*   Updated: 2018/10/29 15:09:19 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,9 @@ static int    count_words(char const *s, int i, char c)
     {
         if (s[i] == c)
         {
-            words++;
             skip(s, &i, c);
-            if (!s[i])
-                words--;
+            if (s[i])
+                words++;
         }
         else
             i++;
@@ -54,12 +53,10 @@ static int    count_chars(char const *s, int i, char c)
     int    chr;
 
     chr = 0;
-    while (s[i])
+    while (s[i] && s[i] != c)
     {
         chr++;
         i++;
-        if (s[i] == c)
-            break;
     }
     return (chr);
 }
