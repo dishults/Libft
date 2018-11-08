@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrconvert_base.c                               :+:      :+:    :+:   */
+/*   ft_num_len.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/28 18:04:45 by dshults           #+#    #+#             */
-/*   Updated: 2018/11/08 11:53:17 by dshults          ###   ########.fr       */
+/*   Updated: 2018/11/08 12:02:58 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-/*
-** ! Only for ft_printf !
-** As it handles only unsigned numbers
-** No support for signed negative ones
-*/
-
-int    num_length(size_t value, int base)
+int    num_len_base(size_t value, int base)
 {
     int    len;
 
@@ -26,4 +20,24 @@ int    num_length(size_t value, int base)
     while (value /= base)
         len++;
     return (len);
+}
+
+int	ft_num_lenn_u(size_t n)
+{
+	int		i;
+
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
+}
+
+int	ft_num_lenn(long long n)
+{
+	int		i;
+
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
 }

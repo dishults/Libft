@@ -6,7 +6,7 @@
 /*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/04 15:41:18 by dshults           #+#    #+#             */
-/*   Updated: 2018/11/08 11:53:44 by dshults          ###   ########.fr       */
+/*   Updated: 2018/11/08 11:59:59 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,19 +58,19 @@ static void	ft_size_o(t_size *t)
 	else if (t->convsp == 'o' && (t->width || t->precision))
 	{
 		if (ft_strchr_no_zeroo("l2jz", t->len))
-			t->var_size = num_length((size_t)t->num, 8);
+			t->var_size = num_len_base((size_t)t->num, 8);
 		else
-			t->var_size = num_length((unsigned int)t->num, 8);
+			t->var_size = num_len_base((unsigned int)t->num, 8);
 	}
 	else if (t->convsp == 'O' && (t->width || t->precision))
 	{
 		if (ft_strchr_no_zeroo("l2jz", t->len))
-			t->var_size = num_length((size_t)t->num, 8);
+			t->var_size = num_len_base((size_t)t->num, 8);
 		else
-			t->var_size = num_length((unsigned long)t->num, 8);
+			t->var_size = num_len_base((unsigned long)t->num, 8);
 	}
 	else
-		t->var_size = num_length(t->num, 8);
+		t->var_size = num_len_base(t->num, 8);
 }
 
 static void	ft_size_x_p(t_size *t, va_list tmp)
@@ -82,16 +82,16 @@ static void	ft_size_x_p(t_size *t, va_list tmp)
 		else if (t->width || t->precision)
 		{
 			if (ft_strchr_no_zeroo("l2jz", t->len))
-				t->var_size = num_length((size_t)t->num, 16);
+				t->var_size = num_len_base((size_t)t->num, 16);
 			else
-				t->var_size = num_length((unsigned int)t->num, 16);
+				t->var_size = num_len_base((unsigned int)t->num, 16);
 		}
 		else
-			t->var_size = num_length(t->num, 16);
+			t->var_size = num_len_base(t->num, 16);
 	}
 	else if (t->convsp == 'p')
 	{
-		t->var_size = num_length(va_arg(tmp, long), 16);
+		t->var_size = num_len_base(va_arg(tmp, long), 16);
 		if (t->var_size == -1)
 			t->var_size += 2;
 		else if (t->var_size == 0)
