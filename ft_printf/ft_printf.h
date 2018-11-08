@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/04 14:30:02 by dshults           #+#    #+#             */
-/*   Updated: 2018/04/04 14:30:03 by dshults          ###   ########.fr       */
+/*   Updated: 2018/11/08 12:02:46 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int				ft_isasciii_wstr(wchar_t *s);
 int				ft_isdigitt(int c);
 int				ft_isprintt(int c);
 void			*ft_memallocc(size_t size);
-char			*ft_nbrconvert_base(size_t nbr, char *base);
+int				num_len_base(size_t value, int base);
 void			ft_putcharr_w(wchar_t chr);
 void			ft_putcharr(char c);
 int				ft_putnbr_base_u(unsigned long long nbr, char *base);

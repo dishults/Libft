@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbrr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dshults <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:47:01 by dshults           #+#    #+#             */
-/*   Updated: 2017/11/14 18:47:03 by dshults          ###   ########.fr       */
+/*   Updated: 2018/11/08 12:02:54 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,24 +62,4 @@ int	ft_putnbr_u(unsigned long long n)
 		ret++;
 	}
 	return (ret);
-}
-
-int	ft_num_lenn_u(size_t n)
-{
-	int		i;
-
-	i = 1;
-	while (n /= 10)
-		i++;
-	return (i);
-}
-
-int	ft_num_lenn(long long n)
-{
-	int		i;
-
-	i = 1;
-	while (n /= 10)
-		i++;
-	return (i);
 }

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dshults <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: dshults <dshults@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/14 18:34:55 by dshults           #+#    #+#              #
-#    Updated: 2017/11/14 18:34:57 by dshults          ###   ########.fr        #
+#    Updated: 2018/11/08 12:02:40 by dshults          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS = lib/ft_atoii.c \
 	lib/ft_isdigitt.c \
 	lib/ft_isprintt.c \
 	lib/ft_memallocc.c \
-	lib/ft_nbrconvert_base.c \
+	lib/ft_num_len.c \
 	lib/ft_putnbr_base.c \
 	lib/ft_putnbrr.c \
 	lib/ft_putstrr.c \
