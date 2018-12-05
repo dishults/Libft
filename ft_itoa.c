@@ -6,7 +6,7 @@
 /*   By: dshults <dshults@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/14 18:19:32 by dshults           #+#    #+#             */
-/*   Updated: 2018/10/31 12:43:22 by dshults          ###   ########.fr       */
+/*   Updated: 2018/12/05 15:20:20 by dshults          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 static int	ft_num_len(int n)
 {
-	unsigned int		i;
+	int		i;
 
 	i = 1;
 	if (n < 0)
@@ -32,18 +32,19 @@ char		*ft_itoa(int n)
 {
 	char			*str;
 	unsigned int	num;
-	unsigned int	num_len;
+	int				num_len;
 
-	num = n;
+	num = (unsigned int)n;
 	num_len = ft_num_len(n);
-	if (n < 0)
-		num = -n;
 	if (!(str = ft_strnew(num_len)))
 		return (0);
+	if (n < 0)
+	{
+		str[0] = '-';
+		num *= -1;
+	}
 	str[--num_len] = num % 10 + '0';
 	while (num /= 10)
 		str[--num_len] = num % 10 + '0';
-	if (n < 0)
-		str[0] = '-';
 	return (str);
 }
